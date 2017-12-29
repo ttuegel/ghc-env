@@ -1,4 +1,4 @@
-import <ghc-env> rec {
+import <ghc-env> {
   haskellPackages = pkgs: pkgs.haskell.packages.ghc822;
   inputs = hsPackages: with hsPackages;
     [
