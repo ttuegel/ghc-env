@@ -1,0 +1,6 @@
+/.ghc.environment.*
+*.dyn_hi
+*.dyn_o
+*.hi
+*.o
+/result*

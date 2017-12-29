@@ -1,0 +1,9 @@
+* DONE Implement ghc-env in Haskell
+
+* TODO Allow to hide core libraries
+
+* TODO Use packages from all-cabal-hashes
+
+* TODO Use packages from non-Hackage sources
+
+* TODO Crib options from Rien
