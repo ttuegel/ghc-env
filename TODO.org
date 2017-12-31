@@ -10,3 +10,7 @@
 
 - Nixpkgs lock file
 - GHC versioning
+
+* TODO Shell environments
+
+Saving the GHC environment file is a cute trick, but does not support foreign dependencies or other build tools. We will need to support actual nix-shell-based environments.
