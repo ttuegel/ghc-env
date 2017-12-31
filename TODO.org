@@ -14,3 +14,7 @@
 * TODO Shell environments
 
 Saving the GHC environment file is a cute trick, but does not support foreign dependencies or other build tools. We will need to support actual nix-shell-based environments.
+
+* TODO Allow user to select extra build tools
+
+Some build tools are required by the project (for example, preprocessors). Other build tools are a matter of user preference. We should have a user configuration file to specify build tools that should be installed in all environments.
