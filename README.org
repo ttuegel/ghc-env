@@ -1,0 +1,26 @@
+* ghc-env
+
+=ghc-env= is my failed experiment
+to create an environment for Haskell development
+using Nix but without =nix-shell= or Cabal.
+The =ghc-env= command reads =ghc.environment.nix=
+to create an environment file for GHC.
+GHC reads the environment file
+to select which packages will be hidden or exposed.
+I chose to avoid Cabal to keep the environment minimal.
+I wanted the environment to be available outside =nix-shell=
+for better editor integration.
+
+Although the =ghc-env= command works as advertised,
+I consider this a failed experiment
+because I set forth the wrong goals.
+It's not practical to do Haskell development without Cabal
+because so many packages and build tools use it.
+And operating outside =nix-shell= causes several problems:
+- The environment packages are built with a particular GHC,
+  but there is no guarantee that GHC will finally be used.
+- Outside of =nix-shell=, we still cannot use foreign libraries.
+- There is no way to provide other build tools, like GCC or autoconf.
+
+In the end, the best way to get a simple Haskell development environment is
+to use ~ghcWithPackages~ from Nixpkgs.
